@@ -1,0 +1,43 @@
+# Readbacks
+
+ATC listens to your readback the way a controller does, and the window shows you the verdict.
+
+## What needs a readback
+
+- An IFR clearance or an amendment: all of its items.
+- Runway instructions: hold short, line up and wait, cleared for takeoff, cleared to land, and each runway crossing.
+- A taxi route's runway and its hold shorts.
+- Altitudes, headings, crossing restrictions, procedures ("descend via"), and an approach clearance with its runway.
+
+A **frequency change** needs no readback. "Over to Ground", "point seven", or just changing frequency are all fine.
+
+## A correct readback
+
+Silence on the radio, as in real life, and a green **✓ Readback accepted** in the window and the log. Only an IFR clearance gets a spoken "readback correct".
+
+## A wrong readback
+
+ATC corrects the one item that was wrong:
+
+> "Negative, squawk six six six two."
+
+The window shows an amber **✗ Corrected**. A safety item you left out, such as a hold short or a runway, gets one "read back hold short instructions". ATC asks twice at most, then moves on with a "verify".
+
+## What it forgives
+
+Speech recognition is not perfect, and neither is anyone's radio work:
+
+- **Only a clearly different value is corrected.** An item the recognition did not catch is not held against you, unless it is a safety item (a hold short, a runway, an altitude), which gets one "read back".
+- **Names by sound.** "Elma five" for the Elmaa Five arrival, "Helms six" for the Helns Six. The number has to be right.
+- **Your callsign as you say it.** A filed "WALKER 9798" is "Walker ninety-seven ninety-eight". A call with one character off, or with only the end of your registration, still counts as you.
+- **Numbers are strict.** A different runway, altitude, heading or squawk is never accepted as close enough.
+
+## When you forget
+
+About 30 seconds after ATC stops talking, and never while you are transmitting, ATC reminds you: "read back hold short instructions", "confirm cleared to land runway one six center". A takeoff clearance is reminded sooner.
+
+The **Read back** line under push-to-talk shows what ATC is still waiting for, so you can see it before the reminder comes.
+
+## If ATC did not catch your callsign
+
+A garbled call, or one with no callsign, gets "Aircraft calling Seattle Ground, say again." It never gets a clearance.

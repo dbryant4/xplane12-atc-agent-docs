@@ -1,0 +1,62 @@
+site_name: xatc-agent
+site_description: AI air traffic control for X-Plane 12. You talk on the radio, a controller answers.
+site_url: https://dbryant4.github.io/xplane12-atc-agent-docs/
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Install and sign in: getting-started.md
+      - Your first flight: first-flight.md
+  - The window: window.md
+  - Settings: settings.md
+  - What ATC can do:
+      - features/index.md
+      - Clearance Delivery: features/clearance.md
+      - Ground: features/ground.md
+      - Tower: features/tower.md
+      - Departure and Center: features/departure-center.md
+      - Approach: features/approach.md
+      - Readbacks: features/readbacks.md
+      - ATIS and weather: features/atis-weather.md
+      - At every position: features/everywhere.md
+  - In the window:
+      - The approach plan: client/approach-card.md
+      - Parking: client/parking.md
+      - Pre-departure clearance by text: client/pdc.md
+      - Your X-Plane's data: client/xplane-data.md
+  - Your data: privacy.md
+  - Troubleshooting: troubleshooting.md
+  - How it works: how-it-works.md
