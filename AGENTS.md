@@ -5,6 +5,7 @@ The public documentation site for xatc-agent, AI air traffic control for X-Plane
 ## Requirements
 
 - **A public repository for pilot-facing documentation** (owner, 2026-10-06: "can you create a new public repo that contains documentation about how to use, configure, the features of the agentic ai for xplane? It needs to be public so we can use github pages"). The site covers how to use it, how to configure it, and its features. It follows the older xatc documentation site: MkDocs Material, the `gh-pages` branch, a strict build.
+- **The site looks like the product** (owner, 2026-10-06: "Make the theme cooler and match the overall color scheme of the product"). The colours are the client window's own tokens (its `style.css`: dark `#0d1117` / panel `#161b22` / border `#30363d` / accent `#58a6ff` / frequency green `#7ee787` / amber `#e3b341` / ATC blue `#79c0ff`, and its light set), in `docs/stylesheets/xatc.css`. Like the window, the site is **dark by default** with a switch to light, uses the system fonts (no web fonts are fetched), and a quote reads like a line of the window's log. The home page is a landing page: a hero with a radio call and the window, the flight's frequencies, and feature cards. When the client's colours change, change the tokens at the top of `xatc.css` to match. The hero's radar sweep stands still for anyone who asks for reduced motion; keep it that way.
 - **Record every requirement the owner states here**, dated, with his words, in the same change that carries it out.
 
 ## What must never be in this repository
