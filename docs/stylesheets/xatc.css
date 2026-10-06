@@ -206,4 +206,27 @@
   .xa-hero { padding: 2rem 1rem 1.6rem; border-radius: 12px; }
   .md-typeset .xa-hero h1 { font-size: 1.9rem; }
   .xa-call p { grid-template-columns: 1fr; }
+  .xa-tagline { font-size: 0.85rem; }
+  .xa-kicker { letter-spacing: 0.05em; font-size: 0.6rem; }
 }
+
+/* ---- The component diagram (docs/how-it-works.md): inline SVG, so it follows the theme switch ---- */
+
+.md-typeset figure.xa-diagram { display: block; width: 100%; max-width: none; margin: 1.4em 0; padding: 0.6rem 0.6rem 0.2rem; overflow-x: auto; background: var(--xa-bg); border: 1px solid var(--xa-border); border-radius: 12px; }
+.xa-diagram svg { display: block; width: 100%; min-width: 38rem; height: auto; font-family: var(--md-text-font); }
+.md-typeset figure.xa-diagram figcaption { max-width: none; margin: 0.4em 0 0.5em; font-style: normal; font-size: 0.72rem; color: var(--xa-dim); }
+.xa-diagram .g { fill: color-mix(in srgb, var(--xa-panel) 45%, transparent); stroke: var(--xa-border); stroke-width: 1.2; stroke-dasharray: 6 5; }
+.xa-diagram .gw { fill: color-mix(in srgb, var(--xa-panel) 80%, transparent); stroke: var(--xa-border); stroke-width: 1.2; }
+.xa-diagram .b { fill: var(--xa-panel); stroke: var(--xa-border); stroke-width: 1.2; }
+.xa-diagram .b.hl { stroke: var(--xa-accent); stroke-width: 1.6; }
+.xa-diagram .m { fill: color-mix(in srgb, var(--xa-accent) 16%, var(--xa-panel)); stroke: var(--xa-accent); stroke-width: 1.4; }
+.xa-diagram .s { fill: color-mix(in srgb, var(--xa-freq) 9%, var(--xa-panel)); stroke: var(--xa-freq); stroke-width: 1.2; stroke-dasharray: 4 3; }
+.xa-diagram .t { fill: var(--xa-text); font-size: 13px; font-weight: 700; }
+.xa-diagram .u { fill: var(--xa-dim); font-size: 10.5px; }
+.xa-diagram .l { fill: var(--xa-text); font-size: 10.5px; }
+.xa-diagram .lk { fill: var(--xa-accent); font-size: 10.5px; font-weight: 700; }
+.xa-diagram .gt { fill: var(--xa-dim); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.xa-diagram .a { fill: none; stroke: var(--xa-dim); stroke-width: 1.4; }
+.xa-diagram .ah { fill: var(--xa-dim); }
+.xa-diagram .a2 { fill: none; stroke: var(--xa-accent); stroke-width: 2.2; }
+.xa-diagram .ah2 { fill: var(--xa-accent); }
