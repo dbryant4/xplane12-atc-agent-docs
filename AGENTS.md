@@ -5,6 +5,8 @@ The public documentation site for xatc-agent, AI air traffic control for X-Plane
 ## Requirements
 
 - **A public repository for pilot-facing documentation** (owner, 2026-10-06: "can you create a new public repo that contains documentation about how to use, configure, the features of the agentic ai for xplane? It needs to be public so we can use github pages"). The site covers how to use it, how to configure it, and its features. It follows the older xatc documentation site: MkDocs Material, the `gh-pages` branch, a strict build.
+- **The site looks like the product** (owner, 2026-10-06: "Make the theme cooler and match the overall color scheme of the product"). The colours are the client window's own tokens (its `style.css`: dark `#0d1117` / panel `#161b22` / border `#30363d` / accent `#58a6ff` / frequency green `#7ee787` / amber `#e3b341` / ATC blue `#79c0ff`, and its light set), in `docs/stylesheets/xatc.css`. Like the window, the site is **dark by default** with a switch to light, uses the system fonts (no web fonts are fetched), and a quote reads like a line of the window's log. The home page is a landing page: a hero with a radio call and the window, the flight's frequencies, and feature cards. When the client's colours change, change the tokens at the top of `xatc.css` to match. The hero's radar sweep stands still for anyone who asks for reduced motion; keep it that way.
+- **A diagram of how the parts work together, and the cloud side kept vague** (owner, 2026-10-06: "also, make a diagram showing how the components interact", then "keep the aws bit vuage"). `docs/how-it-works.md` has the diagram: inline SVG styled by `xatc.css` (classes `g`, `b`, `m`, `s`: a group, plain code, an AI model, data), so it follows the theme switch. On the whole site the cloud is "the cloud": **no cloud provider and none of its services are named**, in text or in a picture. Say what a part does ("speech recognition", "an AI model", "text to speech", "the voice gateway", "the sign-in service"). The one exception is a label the pilot has to find in the client's window, such as Settings' **Runtime ARN**, which is quoted as the window shows it.
 - **Record every requirement the owner states here**, dated, with his words, in the same change that carries it out.
 
 ## What must never be in this repository
@@ -14,7 +16,7 @@ Everything here is public, including the history. Before every commit, check tha
 - cloud account ids, resource names or addresses (the gateway's runtime ARN, bucket names, the sign-in domain, the sign-in app client id, user pool ids);
 - anyone's email address or name, including in screenshots (the client's demo data shows a real name: replace it before taking a screenshot);
 - flight ids, session ids, recordings, transcripts or tracks of real flights;
-- costs, and anything about the owner's cloud setup beyond what `docs/how-it-works.md` says;
+- the cloud provider's name or its services' names (above), costs, and anything about the owner's cloud setup beyond what `docs/how-it-works.md` says;
 - the private repositories' code, their internal notes, and the owner's or the testers' words from them.
 
 The pilot gets the gateway address and the client package from the owner, privately. The site says so and never prints them.

@@ -1,26 +1,99 @@
-# xatc-agent
+---
+hide:
+  - navigation
+  - toc
+---
 
-**AI air traffic control for X-Plane 12.** You hold push-to-talk and speak as you would on a real radio. A controller answers in US FAA phraseology, on the frequency you are tuned to, from the gate at one airport to the gate at the next.
+<div class="xa-hero" markdown>
+
+<span class="xa-kicker">AI air traffic control · X-Plane 12</span>
+
+# Talk to ATC. It talks back.
+
+<p class="xa-tagline">Hold push-to-talk and speak as you would on a real radio. A controller answers in US FAA phraseology, on the frequency you are tuned to, from the gate at one airport to the gate at the next.</p>
+
+[Get started](getting-started.md){ .md-button .md-button--primary }
+[What ATC can do](features/index.md){ .md-button }
+
+<div class="xa-call">
+<p class="you"><span class="who">You</span><span class="said">Seattle Clearance, November 547 Golf Alpha, IFR to Portland with Charlie.</span></p>
+<p class="atc"><span class="who">Clearance</span><span class="said">N547GA, cleared to Portland via the SUMMA2 departure, then as filed. Maintain 5000, expect 16000 10 minutes after departure. Departure frequency 119.2, squawk 4521.</span></p>
+<p class="you"><span class="who">You</span><span class="said">Cleared to Portland, SUMMA2 then as filed, 5000 expect 16000, 119.2, squawk 4521, 547GA. <span class="ok">✓ Readback accepted</span></span></p>
+</div>
 
 ![The xatc-agent window during an approach: the radios, push-to-talk, ATC's plan for the approach and the log](assets/window-approach.png)
 
-*The window beside X-Plane, while Approach is vectoring the flight for an ILS: the radios as X-Plane has them, push-to-talk, ATC's plan for the approach, and the log of what was said.*
+</div>
+
+<ul class="xa-strip">
+  <li><b>128.000</b>Clearance</li>
+  <li><b>121.700</b>Ground</li>
+  <li><b>119.900</b>Tower</li>
+  <li><b>119.200</b>Departure</li>
+  <li><b>124.200</b>Center</li>
+  <li><b>124.350</b>Approach</li>
+  <li><b>118.700</b>Tower</li>
+  <li><b>121.900</b>Ground</li>
+</ul>
 
 ## What it does
 
-- **Every position talks to you.** Clearance Delivery, Ground, Tower, Departure, Center and Approach, each on its real frequency. Tune a frequency nobody is on and you hear nothing, as on a real radio.
-- **Real procedures.** IFR clearances, taxi routes with hold-short instructions, takeoff and landing clearances, climbs and descents, SIDs and STARs, vectors to an ILS, RNAV or visual approach, and handoffs between controllers.
-- **ATC calls you too.** Handoffs, a readback you forgot, an altitude you drifted from, traffic, a go-around: the controller speaks first when a real one would.
-- **Readbacks are checked.** A correct readback gets silence and a check mark in the window. A wrong one is corrected: "negative, squawk six six six two".
-- **Any US airport**, from the FAA's own data: procedures, frequencies, airspace and minimum altitudes. Taxiways and parking come from your own X-Plane scenery, so Ground taxis you on the airport you actually see.
-- **A window that helps.** The frequency to tune next, what ATC is still waiting for you to read back, ATC's plan for your approach as a diagram, and your destination's parking on a map.
+<div class="grid cards" markdown>
 
-See [What ATC can do](features/index.md) for the full list, position by position.
+-   :material-radio-tower: **Every position talks to you**
+
+    ---
+
+    Clearance Delivery, Ground, Tower, Departure, Center and Approach, each on its real frequency. Tune a frequency nobody is on and you hear nothing.
+
+    [:octicons-arrow-right-24: What ATC can do](features/index.md)
+
+-   :material-airplane-takeoff: **Real procedures**
+
+    ---
+
+    IFR clearances, taxi routes with hold shorts, SIDs and STARs, climbs and descents, vectors to an ILS, RNAV or visual approach, and handoffs in between.
+
+    [:octicons-arrow-right-24: A flight, gate to gate](first-flight.md)
+
+-   :material-check-decagram: **Readbacks are checked**
+
+    ---
+
+    A correct readback gets silence and a check mark. A wrong one is corrected: "negative, squawk six six six two".
+
+    [:octicons-arrow-right-24: Readbacks](features/readbacks.md)
+
+-   :material-bullhorn: **ATC calls you first**
+
+    ---
+
+    Handoffs, a readback you forgot, an altitude you drifted from, traffic, a go-around: the controller speaks when a real one would.
+
+    [:octicons-arrow-right-24: At every position](features/everywhere.md)
+
+-   :material-map-marker-path: **ATC's plan, drawn**
+
+    ---
+
+    When Approach vectors you, the window draws the whole plan: the downwind, the base turn, where you join the final, and you.
+
+    [:octicons-arrow-right-24: The approach plan](client/approach-card.md)
+
+-   :material-earth: **Any US airport**
+
+    ---
+
+    Procedures, frequencies and airspace from the FAA's own data. Taxiways and parking from your own X-Plane scenery.
+
+    [:octicons-arrow-right-24: Your X-Plane's data](client/xplane-data.md)
+
+</div>
 
 ## What a flight is like
 
 1. Start X-Plane 12 and the xatc-agent window. Press **New flight** and enter your flight plan, or load it from SimBrief.
-2. Tune the ATIS and listen. Then call Clearance Delivery: *"Seattle Clearance, November five four seven Golf Alpha, IFR to Portland with information Charlie."* You get your clearance and read it back.
+2. Tune the ATIS and listen. Then call Clearance Delivery, get your clearance and read it back.
 3. Ground taxis you to the runway. Tower clears you for takeoff. Departure climbs you and puts you on course. Center takes you to cruise and brings you down again.
 4. Approach vectors you to final and clears the approach. Tower clears you to land and tells you where to leave the runway. Ground taxis you to the parking you ask for.
 
@@ -28,11 +101,23 @@ See [What ATC can do](features/index.md) for the full list, position by position
 
 ## What you need
 
-- X-Plane 12 on Windows 10 or 11, and a microphone.
-- An xatc-agent account. The project is an invitation-only experiment: the owner creates your account and gives you the client.
-- An internet connection during the flight. The controller runs in the cloud; the window beside X-Plane is a thin client.
+<div class="grid cards" markdown>
 
-[Install and sign in](getting-started.md) has the details.
+-   :material-monitor: **X-Plane 12 on Windows**
+
+    ---
+
+    Windows 10 or 11, a microphone, and an internet connection during the flight. The controller runs in the cloud; the window beside X-Plane is a thin client.
+
+-   :material-account-key: **An invitation**
+
+    ---
+
+    xatc-agent is an invitation-only experiment. The owner creates your account and gives you the client.
+
+    [:octicons-arrow-right-24: Install and sign in](getting-started.md)
+
+</div>
 
 ## Know before you fly
 

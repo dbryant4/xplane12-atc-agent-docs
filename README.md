@@ -36,4 +36,5 @@ The `docs` workflow runs the strict build on every pull request and publishes on
 | `docs/features/` | What ATC can do, position by position |
 | `docs/client/` | The window's cards: the approach plan, parking, PDC, your X-Plane's data |
 | `docs/privacy.md`, `troubleshooting.md`, `how-it-works.md` | Your data, when something goes wrong, the design in one page |
-| `docs/assets/` | Screenshots, taken from the client's demo data |
+| `docs/assets/` | Screenshots, taken from the client's demo data, and the logo |
+| `docs/stylesheets/xatc.css` | The look: the client window's colours, dark first |
